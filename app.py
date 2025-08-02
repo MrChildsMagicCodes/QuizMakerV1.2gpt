@@ -39,8 +39,17 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="banner">🧙‍♂️ Mr. Childs Magical Quiz Maker</div>', unsafe_allow_html=True)
+st.markdown("<div class=\"banner\">🧙‍♂️ Mr. Childs' Magical Quiz Maker</div>", unsafe_allow_html=True)
 st.markdown('<div class="magical-box">Upload a screenshot of quiz questions and generate a Canvas-ready QTI file using GPT magic!</div>', unsafe_allow_html=True)
+
+# API Key Instructions
+st.markdown("""
+🔐 **Using GPT Features**
+
+- To enable GPT-powered question extraction, paste your [OpenAI API key](https://platform.openai.com/account/api-keys) below.
+- Your key is stored only during this session and never shared.
+- Don’t have one? You can sign up at [platform.openai.com](https://platform.openai.com).
+""")
 
 # API Key input
 api_key = st.text_input("🔑 Enter your OpenAI API key to activate GPT parsing", type="password")
@@ -91,3 +100,4 @@ if "questions" in st.session_state and st.session_state["questions"]:
                 b64 = base64.b64encode(f.read()).decode()
                 href = f'<a href="data:application/zip;base64,{b64}" download="canvas_quiz.zip">📥 Download Enchanted QTI Zip</a>'
                 st.markdown(href, unsafe_allow_html=True)
+
