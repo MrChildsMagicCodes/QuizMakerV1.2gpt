@@ -39,7 +39,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="banner">🧙‍♂️ Mr. Childs' Magical Quiz Maker</div>', unsafe_allow_html=True)
+st.markdown('<div class="banner">🧙‍♂️ Mr. Childs Magical Quiz Maker</div>', unsafe_allow_html=True)
 st.markdown('<div class="magical-box">Upload a screenshot of quiz questions and generate a Canvas-ready QTI file using GPT magic!</div>', unsafe_allow_html=True)
 
 # API Key input
